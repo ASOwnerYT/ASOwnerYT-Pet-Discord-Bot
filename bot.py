@@ -8,7 +8,7 @@ client = commands.Bot(command_prefix = "aso.")
 # Print to console when bot is ready
 @client.event
 async def on_ready():
-    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="ASOwnerYT"))
+    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="ASOwnerYT"))
     print("Bot is ready")
 
 # Pong command
@@ -48,5 +48,5 @@ async def _8ball(ctx):
 async def clear(ctx, amount=5):
     await ctx.channel.purge(limit=amount)
 
-# Finally, start the bot (token is required)
+# Finally, start the bot (Change DISCORD_TOKEN with your bot token)
 client.run(os.environ['DISCORD_TOKEN'])
