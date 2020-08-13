@@ -1,5 +1,6 @@
 import discord
 import random
+import os
 from discord.ext import commands
 
 client = commands.Bot(command_prefix = "aso.")
@@ -48,4 +49,4 @@ async def clear(ctx, amount=5):
     await ctx.channel.purge(limit=amount)
 
 # Finally, start the bot (token is required)
-client.run('NjQxODc4MjMxNDgxNDUwNDk5.XcOxrw.N5op10TsLP2ijokcQQXeuqKN6hE')
+client.run(os.environ['DISCORD_TOKEN'])
