@@ -48,4 +48,4 @@ async def clear(ctx, amount=5):
     await ctx.channel.purge(limit=amount)
 
 # Finally, start the bot (token is required)
-client.run('NjQxODc4MjMxNDgxNDUwNDk5.XcOxrw.7o9l_oZ65z7-CO06wILlNlhwCP8')
+client.run('NjQxODc4MjMxNDgxNDUwNDk5.XcOxrw.N5op10TsLP2ijokcQQXeuqKN6hE')
