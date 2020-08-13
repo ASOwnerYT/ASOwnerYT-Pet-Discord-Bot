@@ -48,5 +48,21 @@ async def _8ball(ctx):
 async def clear(ctx, amount=5):
     await ctx.channel.purge(limit=amount)
 
+# Say command (Owner only)
+@client.command()
+@commands.is_owner()
+async def say(ctx, *, message):
+    await ctx.send(message)
+
+# NOT WORKING - Say command with custom permissions (spesificuser)
+#@client.command()
+#async def say(ctx, *, message):
+#    specificuser=['ASOwnerYT#7799']
+#    if ctx.author not in specificuser:
+#        return
+#    else:
+#        ctx.send(str(message))
+
 # Finally, start the bot (Change DISCORD_TOKEN with your bot token)
-client.run(os.environ['DISCORD_TOKEN'])
+client.run('NjQxODc4MjMxNDgxNDUwNDk5.XcOxrw.N5op10TsLP2ijokcQQXeuqKN6hE')
+# Heroku: os.environ['DISCORD_TOKEN']
