@@ -54,14 +54,16 @@ async def clear(ctx, amount=5):
 async def say(ctx, *, message):
     await ctx.send(message)
 
-# NOT WORKING - Say command with custom permissions (spesificuser)
-#@client.command()
-#async def say(ctx, *, message):
-#    specificuser=['ASOwnerYT#7799']
-#    if ctx.author not in specificuser:
-#        return
-#    else:
-#        ctx.send(str(message))
+@client.command()
+async def calc(ctx, a:int, i, b:int):
+    if i == '+':
+        await ctx.send(a + b)
+    if i == '-':
+        await ctx.send(a - b)
+    if i == '*' or 'x':
+        await ctx.send(a * b)
+    if i == '/':
+        await ctx.send(a / b)
 
 # Finally, start the bot (Change DISCORD_TOKEN with your bot token)
 client.run('NjQxODc4MjMxNDgxNDUwNDk5.XcOxrw.N5op10TsLP2ijokcQQXeuqKN6hE')
