@@ -37,7 +37,7 @@ async def _8ball(ctx):
         "Concentrate and ask again.",
         "Don't count on it.",
         "My reply is no.",
-        "My sources say no.",
+        "My sources echo no.",
         "Outlook not so good.",
         "Very doubtful."
     ]
@@ -48,12 +48,13 @@ async def _8ball(ctx):
 async def clear(ctx, amount=5):
     await ctx.channel.purge(limit=amount)
 
-# Say command (Owner only)
+# Echo command (Owner only)
 @client.command()
 @commands.is_owner()
-async def say(ctx, *, message):
+async def echo(ctx, *, message):
     await ctx.send(message)
 
+# Calculator command (calc)
 @client.command()
 async def calc(ctx, a:int, i, b:int):
     if i == '+':
@@ -65,6 +66,6 @@ async def calc(ctx, a:int, i, b:int):
     if i == '/':
         await ctx.send(a / b)
 
-# Finally, start the bot (Change DISCORD_TOKEN with your bot token)
-client.run('NjQxODc4MjMxNDgxNDUwNDk5.XcOxrw.N5op10TsLP2ijokcQQXeuqKN6hE')
-# Heroku: os.environ['DISCORD_TOKEN']
+
+# Finally, start the bot
+client.run('os.environ['DISCORD_TOKEN']')
