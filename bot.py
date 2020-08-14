@@ -68,4 +68,4 @@ async def calc(ctx, a:int, i, b:int):
 
 
 # Finally, start the bot
-client.run('os.environ['DISCORD_TOKEN']')
+client.run(os.environ['DISCORD_TOKEN'])
