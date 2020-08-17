@@ -43,8 +43,9 @@ async def _8ball(ctx):
     ]
     await ctx.send(f'{random.choice(responses)}')
 
-# Clear command
+# Clear command (Owner only)
 @client.command()
+@commands.is_owner()
 async def clear(ctx, amount=5):
     await ctx.channel.purge(limit=amount)
 
@@ -53,6 +54,7 @@ async def clear(ctx, amount=5):
 @commands.is_owner()
 async def echo(ctx, *, message):
     await ctx.send(message)
+    await ctx.message.delete()
 
 # Calculator command (calc)
 @client.command()
@@ -68,4 +70,5 @@ async def calc(ctx, a:int, i, b:int):
 
 
 # Finally, start the bot
-client.run(os.environ['DISCORD_TOKEN'])
+client.run('NjQxODc4MjMxNDgxNDUwNDk5.XcOxrw.N5op10TsLP2ijokcQQXeuqKN6hE')
+#os.environ['DISCORD_TOKEN']
